@@ -1,7 +1,7 @@
 import librosa
 import numpy as np
 import soundfile as sf
-
+#change by shree
 def load_and_preprocess_audio(file_path: str, target_sr: int = 16000) -> tuple[np.ndarray, int]:
     """
     Loads an audio file, converts it to mono, resamples to target_sr, 
