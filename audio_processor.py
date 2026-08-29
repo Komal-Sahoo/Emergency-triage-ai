@@ -4,6 +4,7 @@ import soundfile as sf
 #change by shree
 #change 2
 #change by komal
+#afreen
 def load_and_preprocess_audio(file_path: str, target_sr: int = 16000) -> tuple[np.ndarray, int]:
     """
     Loads an audio file, converts it to mono, resamples to target_sr, 
