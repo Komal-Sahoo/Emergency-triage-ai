@@ -5,6 +5,7 @@ import torch
 import whisper
 from transformers import pipeline
 import streamlit as st
+import os
 
 # Automatic Hardware Acceleration Check
 DEVICE = 0 if torch.cuda.is_available() else -1
@@ -12,7 +13,7 @@ TORCH_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 @st.cache_resource
 def get_whisper_model():
-    return whisper.load_model("small", device=TORCH_DEVICE)
+    return whisper.load_model("medium", device=TORCH_DEVICE)
 
 @st.cache_resource
 def get_audio_classifier():
